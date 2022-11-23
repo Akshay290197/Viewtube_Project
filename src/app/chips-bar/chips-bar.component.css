@@ -1,0 +1,4 @@
+.chip mat-chip:hover{
+    cursor: pointer;
+    background-color: aqua;
+}

@@ -1,0 +1,95 @@
+
+<mat-toolbar>
+
+  <mat-toolbar-row>
+    <button mat-icon-button class="menu">
+      <mat-icon style="background-color:accent; color: white;" (click)="sidenav.toggle();">menu</mat-icon>
+    </button>
+    <span style="background-color:accent; color: white;">ViewTube</span>
+    
+   
+    <div class="example-center">
+      <form class="form-inline md-form form-sm active-purple-2">
+        <input class="form-control" type="text" placeholder="Search">
+
+      <button mat-icon-button class="search">
+        <mat-icon>search</mat-icon>
+      </button>
+    
+      <button mat-icon-button class="mic">
+        <mat-icon matTooltip="Audio Search">mic</mat-icon>
+      </button>
+    </form>
+
+    </div>
+   
+    <div class="icons_header">
+   <button mat-icon-button>
+    <mat-icon style="color: white;">notifications</mat-icon>
+   </button>
+   <button mat-icon-button>
+    <mat-icon style="color: white;" matTooltip="Create Videos">video_call</mat-icon>
+   </button>
+   <button mat-icon-button>
+    <mat-icon style="color: white;" matTooltip="Apps">apps</mat-icon>
+   </button>
+   <button mat-icon-button [matMenuTriggerFor]="menu">
+     <mat-icon style="color: white;" matTooltip="Manage Profile">person_outline</mat-icon>
+   </button>
+  </div>
+   
+   <mat-menu #menu="matMenu">
+     <button mat-menu-item style="color: black;">
+     <span><mat-icon style="color: black;">settings</mat-icon>Settings</span>
+     </button>
+     <button mat-menu-item style="color: black;">
+      <span><mat-icon style="color: black;">help</mat-icon>Help</span>
+    </button>
+    <button mat-menu-item style="color: black;">
+      <span><mat-icon style="color: black;">notifications_off</mat-icon>Disabled alerts</span>
+    </button>
+    <button mat-menu-item style="color: black;">
+      <span><mat-icon style="color: black;">feedback</mat-icon>Send feedback</span>
+    </button>
+   </mat-menu>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="bg">
+    <app-chips-bar></app-chips-bar>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav_icons">
+  <mat-sidenav #sidenav opened="false">
+    <mat-nav-list>
+      <a mat-list-item style="color: white;">
+        <mat-icon>home</mat-icon>  Home
+      </a>
+      <a mat-list-item style="color: white;">
+        <mat-icon>explore</mat-icon>  Explore
+      </a>
+      <a mat-list-item style="color: white;">
+        <mat-icon>subscriptions</mat-icon>  Subscriptions
+      </a>
+      <a mat-list-item style="color: white;">
+        <mat-icon>video_library</mat-icon>  Library
+      </a>
+      <a mat-list-item style="color: white;">
+        <mat-icon>history</mat-icon>  History
+      </a>
+      <hr>
+      <p>
+        Sign in to like videos, comment, and subscribe.
+      </p>
+      <button style="padding:5%;color:red;font-weight: bold;font-size: larger;margin-left: 8vw;
+      width: fit-content;background-color: yellow;">
+      <mat-icon>circle</mat-icon> 
+      SIGN IN
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div style="height: 88vh;">
+    <app-video-content></app-video-content>
+    </div>
+</mat-sidenav-container>

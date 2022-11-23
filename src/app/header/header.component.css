@@ -1,0 +1,53 @@
+.mat-sidenav {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.example-center {
+  background-color: accent;
+  color: white;
+  margin-left: 20vw;
+  margin-top: 40px;
+  flex: .5;
+}
+
+.mat-drawer-container {
+  background-color: #454545;
+  
+}
+
+.bg {
+  background-color: black;
+}
+
+.mat-toolbar {
+  background-color: rgb(231, 36, 111);
+}
+
+button.search{
+  position: relative;
+  left: 27vw;
+  top: -35px;
+}
+.mic{
+  position: relative;
+  left: 27vw;
+  top: -35px;
+}
+.icons_header{
+  position: relative;
+  left: 25vw;
+}
+
+.menu{
+  margin-right: 20px;
+}
+
+
+.sidenav_icons a{
+  margin: 10px;
+}
+
+.sidenav_icons a:hover{
+  background-color: pink;
+}
